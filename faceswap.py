@@ -1,7 +1,19 @@
 #!/usr/bin/env python3
 """ The master faceswap.py script """
-import sys
+# 0.download准备招聘
+#   python ~/project/piglab/machinelearning/lib/download_image.py
+# 1.extract提取
+#   python faceswap.py extract -i ./data/photo/huangrong/ -o ./data/extract/huangrong/
+#   python faceswap.py extract -i ./data/photo/guojing/ -o ./data/extract/guojing/
+#   python faceswap.py extract -i ./data/photo/zhu/ -o ./data/extract/zhu/
+#   python faceswap.py extract -i ./data/photo/yan/ -o ./data/extract/yan/
+# 2.train训练   (AB参数：模型用于输入A，输出B)
+#   python faceswap.py train -A ./data/extract/huangrong/ -B ./data/extract/zhu/ -m ./models/huangrong2zhu/ -p
+#   python faceswap.py train -A ./data/extract/guojing/ -B ./data/extract/yan/ -m ./models/guojing2yan/ -p
+# 3.convert替换
+#   python faceswap.py convert -i ./data/test/ -o ./data/output/ -m ./models/huangrong2zhu/
 
+import sys
 import lib.cli as cli
 
 if sys.version_info[0] < 3:

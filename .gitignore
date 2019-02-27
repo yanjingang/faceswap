@@ -1,7 +1,6 @@
 *
 !setup.cfg
 !*.dat
-!*.h5
 !*.ico
 !*.inf
 !*.keep
@@ -31,5 +30,6 @@
 !tools
 !tools/lib*
 *.ini
+*.bk
 *.pyc
 __pycache__/
