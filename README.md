@@ -1,7 +1,7 @@
 ## 使用方法：
 pip install tqdm psutil pathlib numpy opencv-python scikit-image scikit-learn matplotlib ffmpy nvidia-ml-py3 h5py Keras cmake dlib face-recognition
 ```
-# 0.download准备招聘
+# 0.download准备照片
 #   python ~/project/piglab/machinelearning/lib/download_image.py
 # 1.extract提取
 #   python faceswap.py extract -i ./data/photo/huangrong/ -o ./data/extract/huangrong/
