@@ -1,4 +1,5 @@
 ## 使用方法：
+pip install tqdm psutil pathlib numpy opencv-python scikit-image scikit-learn matplotlib ffmpy nvidia-ml-py3 h5py Keras cmake dlib face-recognition
 ```
 # 0.download准备招聘
 #   python ~/project/piglab/machinelearning/lib/download_image.py
@@ -12,6 +13,9 @@
 #   python faceswap.py train -A ./data/extract/guojing/ -B ./data/extract/yan/ -m ./models/guojing2yan/ -p
 # 3.convert替换
 #   python faceswap.py convert -i ./data/test/ -o ./data/output/ -m ./models/huangrong2zhu/
+# 9.视频<->图片互转
+#   ffmpeg -i ./data/video/shediao.mp4 ./data/photo/shediao/video-%d.png
+#   ffmpeg -i ./data/photo/shediao/video-%0d.png -c:v libx264 -vf "fps=25,format=yuv420p" ./data/video/shediao-out.mp4
 ```
 
 **Notice:** This repository is not operated or maintained by /u/deepfakes. Please read the explanation below for details.
