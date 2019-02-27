@@ -8,7 +8,6 @@
 !*.npy
 !*.nsi
 !*.pb
-!*.png
 !*.py
 !*.txt
 !.cache

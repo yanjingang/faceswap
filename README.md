@@ -1,3 +1,4 @@
+## 使用方法：
 ```
 # 0.download准备招聘
 #   python ~/project/piglab/machinelearning/lib/download_image.py
