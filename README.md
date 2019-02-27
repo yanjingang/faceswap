@@ -9,8 +9,8 @@ pip install tqdm psutil pathlib numpy opencv-python scikit-image scikit-learn ma
 #   python faceswap.py extract -i ./data/photo/zhu/ -o ./data/extract/zhu/
 #   python faceswap.py extract -i ./data/photo/yan/ -o ./data/extract/yan/
 # 2.train训练   (AB参数：模型用于输入A，输出B)
-#   python faceswap.py train -A ./data/extract/huangrong/ -B ./data/extract/zhu/ -m ./models/huangrong2zhu/ -p
-#   python faceswap.py train -A ./data/extract/guojing/ -B ./data/extract/yan/ -m ./models/guojing2yan/ -p
+#   nohup python faceswap.py train -A ./data/extract/huangrong/ -B ./data/extract/zhu/ -m ./models/huangrong2zhu/ >log/train-huangrong2zhu.log 2>&1 &
+#   nohup python faceswap.py train -A ./data/extract/guojing/ -B ./data/extract/yan/ -m ./models/guojing2yan/ >log/train-guojing2yan.log 2>&1 &
 # 3.convert替换
 #   python faceswap.py convert -i ./data/test/ -o ./data/output/ -m ./models/huangrong2zhu/
 # 9.视频<->图片互转
