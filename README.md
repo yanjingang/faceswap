@@ -1,4 +1,5 @@
 ## 使用方法：
+yum install cmake bzip2
 pip install tqdm psutil pathlib numpy opencv-python scikit-image scikit-learn matplotlib ffmpy nvidia-ml-py3 h5py Keras cmake dlib face-recognition
 ```
 # 0.download准备照片
