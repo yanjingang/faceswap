@@ -1,22 +1,19 @@
 ## 使用方法：
+```
+download and install  ffmpeg&ffprobe  from:  https://evermeet.cx/ffmpeg/
 yum install cmake bzip2
 pip install tqdm psutil pathlib numpy opencv-python scikit-image scikit-learn matplotlib ffmpy nvidia-ml-py3 h5py Keras cmake dlib face-recognition
-```
-# 0.download准备照片
-#   python ~/project/piglab/machinelearning/lib/download_image.py
+# 0.download视频转照片
+#   ./ffmpeg -i ./data/video/sdyxz-83.flv ./data/photo/sdyxz-83/video-%d.png
 # 1.extract提取
-#   python faceswap.py extract -i ./data/photo/huangrong/ -o ./data/extract/huangrong/
-#   python faceswap.py extract -i ./data/photo/guojing/ -o ./data/extract/guojing/
+#   python faceswap.py extract -i ./data/photo/sdyxz-83/ -o ./data/extract/sdyxz-83-hr/   #需要手工区分一下黄蓉和郭靖的face
 #   python faceswap.py extract -i ./data/photo/zhu/ -o ./data/extract/zhu/
-#   python faceswap.py extract -i ./data/photo/yan/ -o ./data/extract/yan/
 # 2.train训练   (AB参数：模型用于输入A，输出B)
-#   python faceswap.py train -A ./data/extract/huangrong/ -B ./data/extract/zhu/ -m ./models/huangrong2zhu/
-#   python faceswap.py train -A ./data/extract/guojing/ -B ./data/extract/yan/ -m ./models/guojing2yan/
+#   python faceswap.py train -A ./data/extract/sdyxz-83-hr/ -B ./data/extract/zhu/ -m ./models/sdyxz-83-hr2zhu/
 # 3.convert替换
 #   python faceswap.py convert -i ./data/test/ -o ./data/output/ -m ./models/huangrong2zhu/
 # 9.视频<->图片互转
-#   ffmpeg -i ./data/video/shediao.mp4 ./data/photo/shediao/video-%d.png
-#   ffmpeg -i ./data/photo/shediao/video-%0d.png -c:v libx264 -vf "fps=25,format=yuv420p" ./data/video/shediao-out.mp4
+#   ./ffmpeg -i ./data/photo/sdyxz-83/video-%0d.png -c:v libx264 -vf "fps=25,format=yuv420p" ./data/video/sdyxz-83-out.mp4
 ```
 
 **Notice:** This repository is not operated or maintained by /u/deepfakes. Please read the explanation below for details.
