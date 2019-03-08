@@ -1,3 +1,5 @@
+.DS_Store
+*DS_Store
 *
 !setup.cfg
 !*.dat
@@ -31,6 +33,6 @@
 *.ini
 *.bk
 *.pyc
-.DS_Store
+*.DS_Store
 *.DS_Store
 __pycache__/
