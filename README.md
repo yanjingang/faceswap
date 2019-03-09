@@ -5,7 +5,7 @@ yum install cmake bzip2
 pip install tqdm psutil pathlib numpy opencv-python scikit-image scikit-learn matplotlib ffmpy nvidia-ml-py3 h5py Keras cmake dlib face-recognition
 # 0.download视频转照片
 #   ./ffmpeg -i ./data/video/sdyxz-83.flv ./data/photo/sdyxz-83/video-%d.png
-# 1.extract提取
+# 1.extract提取face
 #   python faceswap.py extract -i ./data/photo/sdyxz-83/ -o ./data/extract/sdyxz-83-hr/   #需要手工区分一下黄蓉和郭靖的face
 #   python faceswap.py extract -i ./data/photo/zhu/ -o ./data/extract/zhu/
 # 2.train训练   (AB参数：模型用于输入A，输出B)
