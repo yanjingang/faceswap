@@ -11,7 +11,7 @@ pip install tqdm psutil pathlib numpy opencv-python scikit-image scikit-learn ma
 # 2.train训练   (AB参数：模型用于输入A，输出B)
 #   python faceswap.py train -A ./data/extract/sdyxz-83-hr/ -B ./data/extract/zhu/ -m ./models/sdyxz-83-hr2zhu/
 # 3.convert替换
-#   python faceswap.py convert -i ./data/test/ -o ./data/output/ -m ./models/huangrong2zhu/
+#   python faceswap.py convert -i ./data/test/ -o ./data/output/ -m ./models/sdyxz-83-hr2zhu/
 # 9.视频<->图片互转
 #   ./ffmpeg -i ./data/photo/sdyxz-83/video-%0d.png -c:v libx264 -vf "fps=25,format=yuv420p" ./data/video/sdyxz-83-out.mp4
 ```
